@@ -88,7 +88,7 @@ app.put("/:id",cors(options),(req,res,next) => {
         data[index] = req.body
         res.json(data[index]);
     } else {
-        console.log("Error, Not Found");
+        console.log("Error, Not Found")
         res.end("Error, Not Found");
     };
     });
@@ -116,7 +116,7 @@ app.delete("/:id",cors(options),(req,res,next) => {
             console.log("Error, Not Found");
             res.end("Error, Not Found");
         }
-    });
+    })
     // const { id } = req.params;
     // const index = todo.findIndex(task => task.id === id);
     // if(index > -1){
@@ -128,5 +128,5 @@ app.delete("/:id",cors(options),(req,res,next) => {
     // }
 });
 app.listen(PORT, () => {
-    console.log(`Listenig on http://localhost:${PORT}`);
-});
+    console.log(`Listenig on http://127.0.0.1:${PORT}`);
+})
