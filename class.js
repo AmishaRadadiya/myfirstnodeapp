@@ -12,7 +12,7 @@ class todo{
             completed = [];
             $.each(data, function(key, val){
                 if (val.Completed) {
-                    completed.push(val)
+                    completed.push(val);
                 }
                 else {
                     pending.push(val);
