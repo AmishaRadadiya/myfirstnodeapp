@@ -2,7 +2,7 @@
 
 var pending = []
 var completed = []
-const url="http://127.0.0.1:5555/";
+const url="http://localhost:5555/";
 class todo{
     constructor(url){
         $.get(url , function(data){
@@ -12,7 +12,7 @@ class todo{
             completed = [];
             $.each(data, function(key, val){
                 if (val.Completed) {
-                    completed.push(val);
+                    completed.push(val)
                 }
                 else {
                     pending.push(val);
