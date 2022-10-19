@@ -4,27 +4,45 @@
     box-sizing: border-box;
 }
 input{
-    background-color: #4a707a;
-    color: white;
+    background-color:#ddddda;
+    color: #4a707a;
     margin: 20px;
     padding: 0 5px;
-    height: 25px;
-    border-radius: 5px;
+    height: 30px;
+    border: white;
+    font-weight: bold;
+    /* border-radius: 5px; */
 }
 #task,#des,#Addtask{
-    width: 18em;
-    margin-top: 0;
+    /* width: 72.6em; */
+    margin: 0 ;
+    height: 50px;
+    outline: none;
+    font-size: 15px;
+    width: 67em;    
 }
+/* #task::after,#des::after,#Addtask::after{
+    outline: none;
+} */
 input::placeholder{
-    color: white;
+    color: #4a707a;
 }
-#Addtask, #edit{
-    width: 200px;  
+#Addtask{
+    background-color: #4a707a;
     cursor: pointer;
+    color: white;
+    width: 67em;
+    height: 40px;
+    margin: 10px;
 }
 .main{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    background-color: #ddddda;
+    width: 68em;
+    margin-top: 10px;
+    /* box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.5); */
+
 }
 .both{
     display: flex;
@@ -54,7 +72,7 @@ cursor: pointer;
 }
 .todo-item{
     background-color:#ddddda; 
-    border:2px solid black;  
+    /* border:2px solid black;   */
     margin-bottom:2px; 
     color:black; 
     display:flex; 
@@ -69,11 +87,14 @@ cursor: pointer;
 }
 .error{
     color: red;
-    margin-top: 20px;
+    margin: 0;
+    margin-top: 5px;
    
 }
 .errorbox{
-    display: flex;
+   display: flex;
    flex-direction: column;
-   justify-content: flex-start;
+   margin-left: 3%;
+   /* width: 72.6em; */
+
 }
