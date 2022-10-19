@@ -23,8 +23,8 @@ app.get('/',cors(),(request,response, next) => {
     fs.readFile(__dirname+"/db.json", function (data) {
         data = todo;
         console.log(data);
-        response.json(data);
-        response.end();
+        response.json(data)
+        // response.end();
      })
 })
 // app.set('view engine', 'ejs');
@@ -51,7 +51,6 @@ app.post("/",cors(), (req,res,next) => {
             data.push(obj);
             res.json(data);
             res.end();
-            console.log(obj)
      });
 //     const id = uuidv4();
 //    var obj = {
@@ -90,7 +89,7 @@ app.put("/:id",cors(options),(req,res,next) => {
         res.json(data[index]);
     } else {
         console.log("Error, Not Found");
-        res.end("Error, Not Found")
+        res.end("Error, Not Found");
     };
     });
     // const { id } = req.params;
