@@ -1,6 +1,7 @@
 const PORT = 5555;
 const express = require('express');
 var cors = require('cors');
+// var product = require("./api/product")
 const app = express();
 app.use(cors({methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']}));
 const { v4: uuidv4 } = require('uuid');
@@ -88,8 +89,8 @@ app.put("/:id",cors(options),(req,res,next) => {
         data[index] = req.body
         res.json(data[index]);
     } else {
-        console.log("Error, Not Found")
-        res.end("Error, Not Found");
+        console.log("Error, Not Found");
+        res.end("Error, Not Found")
     };
     });
     // const { id } = req.params;
@@ -129,5 +130,5 @@ app.delete("/:id",cors(options),(req,res,next) => {
 });
 app.listen(PORT, () => {
     console.log(`Listenig on http://localhost:${PORT}`);
-})
+});
 module.exports = app;
