@@ -90,7 +90,7 @@ app.put("/:id",cors(options),(req,res,next) => {
         res.json(data[index]);
     } else {
         console.log("Error, Not Found");
-        res.end("Error, Not Found")
+        res.end("Error, Not Found");
     };
     });
     // const { id } = req.params;
@@ -103,7 +103,8 @@ app.put("/:id",cors(options),(req,res,next) => {
     //     console.log("Error, Not Found");
     //     res.end("Error, Not Found");
     // }
-    // todo.updateOne({id: req.params.id}, todo)
+    // todo.updateOne({id: req.params.id}, todo) 
+    
 });
 app.delete("/:id",cors(options),(req,res,next) => {
     fs.readFile(__dirname+"/db.json", 'utf8', function(data){
