@@ -2,7 +2,7 @@
 
 var pending = []
 var completed = []
-const url="http://localhost:5555/";
+const url="https://vast-everglades-27776.herokuapp.com/";
 class todo{
     constructor(url){
         $.get(url , function(data){

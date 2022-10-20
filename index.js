@@ -129,7 +129,7 @@ app.delete("/:id",cors(options),(req,res,next) => {
     //     res.end("Error, Not Found")
     // }
 });
-app.listen(PORT, () => {
+app.listen(process.env.PORT|| 5555, () => {
     console.log(`Listenig on http://localhost:${PORT}`);
 });
-module.exports = app;
+// module.exports = app;
